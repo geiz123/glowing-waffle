@@ -118,14 +118,39 @@ $( document ).ready(function() {
 
   $('#y1').click(function(){
     $('#mypic1').show();
+    $('#canvas1').show();
   });
   $('#n1').click(function(){
     $('#mypic1').hide();
+    $('#canvas1').hide();
+
+    $('#mypic1').val('');
+    $('#canvas1')[0].width = 0;
   });
 
   $('#mypic1').change(function () {
-    console.log(this.files[0].name);
+    drawOnCanvas(this.files[0], 'canvas1');
+    
   });
+
+  function drawOnCanvas(file, canvas) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var dataURL = e.target.result,
+          c = document.getElementById(canvas), // see Example 4
+          ctx = c.getContext('2d'),
+          img = new Image();
+
+      img.onload = function() {
+        c.width = 50;
+        // c.height = 100;
+        ctx.drawImage(img, 0, 0, c.width, c.height);
+      };
+ 
+      img.src = dataURL;
+    };
+    reader.readAsDataURL(file);
+  }
 
   // swipe support for touch devices
   var targetElement = document.getElementById('viewport'),
