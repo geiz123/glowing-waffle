@@ -66,7 +66,7 @@
               </div>
               <div class="intro--login">
                 <h1>Hello Steven, we have retrieved your W2 from our records and determined your 2020 return.</h1>
-                <h1>You will be recieving a refund of: $ <span class='myRefundMoney green'></span></h1>
+                <h1>You will be recieving a refund of: $ <span id="myBigRefund2" class='myRefundMoney green'></span></h1>
                 <div class="bootstrap-iso">
                   <div class="alert alert-success" role="alert" style="font-size: 23px;">Scroll down to finalize your filing.</div>
                 </div>
@@ -95,7 +95,7 @@
                   <div class="grid-child">
                     <div class="bootstrap-iso"><button type="button" id='picbtn1' class="btn btn-primary btn-sm" style="display: none;">Upload || Snap</button></div>
                     <input type="file" id="mypic1" accept="image/*" capture="camera" style="display:none">
-                    <canvas id="canvas1" width='50' height="70"></canvas>
+                    <canvas id="canvas1" width='50' height="60"></canvas>
                   </div>
                 </div>
                 </span>
@@ -113,7 +113,7 @@
                     <div class="grid-child">
                       <div class="bootstrap-iso"><button type="button" id='picbtn2' class="btn btn-primary btn-sm" style="display: none;">Upload || Snap</button></div>
                       <input type="file" id="mypic2" accept="image/*" capture="camera" style="display:none">
-                      <canvas id="canvas2" width='50' height="70"></canvas>
+                      <canvas id="canvas2" width='50' height="60"></canvas>
                     </div>
                   </div>
                 </span>
@@ -131,7 +131,7 @@
                     <div class="grid-child">
                       <div class="bootstrap-iso"><button type="button" id='picbtn3' class="btn btn-primary btn-sm" style="display: none;">Upload || Snap</button></div>
                       <input type="file" id="mypic3" accept="image/*" capture="camera" style="display:none">
-                      <canvas id="canvas3" width='50' height="70"></canvas>
+                      <canvas id="canvas3" width='50' height="60"></canvas>
                     </div>
                   </div>
                 </span>
@@ -189,6 +189,7 @@
                           Your tax data will now be transmitted to our partner (INTUIT) WITHOUT any encryption to save electricity.
                         </div>
                         <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-dismiss="modal">Contact the John Galt Team!</button>
                           <button type="button" class="btn btn-info" data-dismiss="modal">I changed my mind!</button>
                         </div>
                       </div>
@@ -335,9 +336,8 @@
   </ul>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="jquery-2.2.4.min.js"><\/script>')</script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="jquery-2.2.4.min.js"></script>
+<script src="jquery-ui.js"></script>
 <script src="hammer-2.0.8.js"></script>
 <script src="functions.js"></script>
 <script src="countUp.js"></script>
