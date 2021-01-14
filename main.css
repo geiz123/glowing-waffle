@@ -1821,4 +1821,12 @@ div .question {
 .grid-container .grid-child {
   width: 50px;
 }
+
+.myRefundMoney.green {
+  color: greenyellow;
+}
+
+.myRefundMoney.font2em {
+  font-size: 2em;
+}
 /*# sourceMappingURL=main.css.map */
