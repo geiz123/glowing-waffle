@@ -91,7 +91,8 @@ $( document ).ready(function() {
         $(".intro--banner").hide();
         $(".intro--options").hide();
 
-        $('.myRefundMoney').html(bigRefund);
+        $('.myBigRefund').html(bigRefund);
+        $('#myBigRefund2').html(bigRefund);
         $(".intro--login").show();
 
       },
