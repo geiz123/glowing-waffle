@@ -10,6 +10,7 @@
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="jquery-ui.theme.css">
+  <link rel="stylesheet" href="bootstrap-iso.css">
 </head>
 <body>
 
@@ -19,7 +20,7 @@
     <img src="assets/img/logo.png" alt="Global">
     <p>Global</p>
   </a>
-  <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+  <p class="device-notification--message">Oh, you need a bigger screen to use this app.</p>
 </div>
 
 <div class="perspective effect-rotate-left">
@@ -27,22 +28,25 @@
     <div id="viewport" class="l-viewport">
       <div class="l-wrapper">
         <header class="header">
-          <a class="header--logo" href="#0">
+          <div><a class="header--logo" href="#0">
             <img src="IRS-Logo.svg" alt="IRS">
             <!-- <p>Global</p> -->
           </a>
+        </div>
+          <div style="float: left;width:250%;margin: 7px;"><span style="font-size:13px;">Partner with</span><br><img style="width:59px" src="Intuit_Logo.svg" alt="Intuit"></div>
           <!-- <button class="header--cta cta">Hire Us</button> -->
-          <div class="header--nav-toggle">
+          <div class="header--nav-toggle" style='display: none;'>
             <span></span>
           </div>
+          <div id='myBigRefundDiv' class="myRefundMoney green font2em" style="display: none;">$<span id="myBigRefund">600</span></div>
         </header>
-        <nav class="l-side-nav">
+        <nav class="l-side-nav" style="display: none;">
           <ul class="side-nav">
             <li class="is-active"><span>Home</span></li>
             <li><span>Works</span></li>
             <li><span>About</span></li>
-            <li><span>Contact</span></li>
-            <li><span>Hire us</span></li>
+            <!-- <li><span>Contact</span></li>
+            <li><span>Hire us</span></li> -->
           </ul>
         </nav>
         <ul class="l-main-content main-content">
@@ -61,9 +65,11 @@
                 <!-- <img src="assets/img/introduction-visual.png" alt="Welcome"> -->
               </div>
               <div class="intro--login">
-                <h1>Hello Steven, we have retrieved your W2 from your employer and determined your 2020 return</h1>
-                <button class="cta2">Scroll down to start your filing.
-                </button>
+                <h1>Hello Steven, we have retrieved your W2 from our records and determined your 2020 return.</h1>
+                <h1>You will be recieving a refund of: $ <span class='myRefundMoney green'></span></h1>
+                <div class="bootstrap-iso">
+                  <div class="alert alert-success" role="alert" style="font-size: 23px;">Scroll down to finalize your filing.</div>
+                </div>
               </div>
               <div class="intro--options">
                 <a href="#0">
@@ -77,18 +83,17 @@
             <div class="work">
               <h2>Do you have any of these forms?</h2>
               <div class="question">
-                <span>8888</span>
                 <span>
                 <div class="grid-container">
                   <div class="grid-child">
-                    <form>
-                      <input type="radio" id="y1" name="8888" value="Yes">
-                      <label for="y1">Yes</label><br>
-                      <input type="radio" id="n1" name="8888" value="No">
-                      <label for="n1">No</label><br>
-                    </form>
+                    <div>9001</div>
+                    <input type="radio" id="y1" name="9001" value="Yes">
+                    <label for="y1">Yes</label><br>
+                    <input type="radio" id="n1" name="9001" value="No">
+                    <label for="n1">No</label><br>
                   </div>
                   <div class="grid-child">
+                    <div class="bootstrap-iso"><button type="button" id='picbtn1' class="btn btn-primary btn-sm" style="display: none;">Upload || Snap</button></div>
                     <input type="file" id="mypic1" accept="image/*" capture="camera" style="display:none">
                     <canvas id="canvas1" width='50' height="70"></canvas>
                   </div>
@@ -96,37 +101,37 @@
                 </span>
               </div>
               <div class="question">
-                <span>8888</span>
                 <span>
                   <div class="grid-container">
                     <div class="grid-child">
-                      <form>
-                        <input type="radio" id="y2" name="8888" value="Yes">
-                        <label for="y2">Yes</label><br>
-                        <input type="radio" id="n2" name="8888" value="No">
-                        <label for="n2">No</label><br>
-                      </form>
+                      <div>1098</div>
+                      <input type="radio" id="y2" name="1098" value="Yes">
+                      <label for="y2">Yes</label><br>
+                      <input type="radio" id="n2" name="1098" value="No">
+                      <label for="n2">No</label><br>
                     </div>
                     <div class="grid-child">
-                      <input type="file" id="mypic2" accept="image/*" capture="camera" style="display:block">
+                      <div class="bootstrap-iso"><button type="button" id='picbtn2' class="btn btn-primary btn-sm" style="display: none;">Upload || Snap</button></div>
+                      <input type="file" id="mypic2" accept="image/*" capture="camera" style="display:none">
+                      <canvas id="canvas2" width='50' height="70"></canvas>
                     </div>
                   </div>
                 </span>
               </div>
               <div class="question">
-                <span>8888</span>
                 <span>
                   <div class="grid-container">
                     <div class="grid-child">
-                      <form>
-                        <input type="radio" id="y3" name="8888" value="Yes">
-                        <label for="y3">Yes</label><br>
-                        <input type="radio" id="n3" name="8888" value="No">
-                        <label for="n3">No</label><br>
-                      </form>
+                      <div>8888</div>
+                      <input type="radio" id="y3" name="8888" value="Yes">
+                      <label for="y3">Yes</label><br>
+                      <input type="radio" id="n3" name="8888" value="No">
+                      <label for="n3">No</label><br>
                     </div>
                     <div class="grid-child">
-                      <input type="file" id="mypic3" accept="image/*" capture="camera" style="display:block">
+                      <div class="bootstrap-iso"><button type="button" id='picbtn3' class="btn btn-primary btn-sm" style="display: none;">Upload || Snap</button></div>
+                      <input type="file" id="mypic3" accept="image/*" capture="camera" style="display:none">
+                      <canvas id="canvas3" width='50' height="70"></canvas>
                     </div>
                   </div>
                 </span>
@@ -136,8 +141,62 @@
           <li class="l-section section">
             <div class="about">
               <div class="about--banner">
-                <h2>We<br>believe in<br>passionate<br>people</h2>
-                <a href="#0">Career
+                <br>
+                <h2>You are ready to file...</h2>
+                <div class="bootstrap-iso">
+                  <h3>File with us if you have no changes</h3>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    File with IRS
+                  </button>
+                  <h3>File with our partner if you have changes</h3>
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal2">
+                    File with INTUIT
+                  </button>
+                  
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel" style="color:blue">Success!</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body" style="color:black">
+                          Thank you for filling your tax with the IRS.  Follow us on Twitter for the latest updates.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel" style="color:blue">Success!</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body" style="color:black">
+                          You will now be redirected to our partner at INTUIT to complete your filling.<br> 
+                          Your tax data will now be transmitted to our partner (INTUIT) WITHOUT any encryption to save electricity.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-info" data-dismiss="modal">I changed my mind!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- <a href="#0">Career
                   <span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                     <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
@@ -145,10 +204,10 @@
                     </g>
                     </svg>
                   </span>
-                </a>
+                </a> -->
                 <!-- <img src="assets/img/about-visual.png" alt="About Us"> -->
               </div>
-              <div class="about--options">
+              <!-- <div class="about--options">
                 <a href="#0">
                   <h3>Winners</h3>
                 </a>
@@ -158,10 +217,10 @@
                 <a href="#0">
                   <h3>History</h3>
                 </a>
-              </div>
+              </div> -->
             </div>
           </li>
-          <li class="l-section section">
+          <!-- <li class="l-section section">
             <div class="contact">
               <div class="contact--lockup">
                 <div class="modal">
@@ -182,7 +241,6 @@
           <li class="l-section section">
             <div class="hire">
               <h2>You want us to do</h2>
-              <!-- checkout formspree.io for easy form setup -->
               <form class="work-request">
                 <div class="work-request--options">
                   <span class="options-a">
@@ -263,7 +321,7 @@
                 <input type="submit" value="Send Request">
               </form>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -271,9 +329,9 @@
   <ul class="outer-nav">
     <li class="is-active">Home</li>
     <li>Forms</li>
-    <li>Forms cont'</li>
+    <!-- <li>Forms cont'</li>
     <li>Contact</li>
-    <li>Hire us</li>
+    <li>Hire us</li> -->
   </ul>
 </div>
 
@@ -282,6 +340,8 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="hammer-2.0.8.js"></script>
 <script src="functions.js"></script>
+<script src="countUp.js"></script>
+<script src="bootstrap.min.js"></script>
 
 <div id="dialog-form" title="Usual Login Stuff">
  
