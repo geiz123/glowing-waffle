@@ -1,4 +1,6 @@
 // @codekit-prepend "/vendor/hammer-2.0.8.js";
+var bigRefund = 600;
+var f1 = 123, f2 = 432, f3 = 384;
 
 $( document ).ready(function() {
 
@@ -88,6 +90,8 @@ $( document ).ready(function() {
         $(".intro--banner").css("position", "absolute");
         $(".intro--banner").hide();
         $(".intro--options").hide();
+
+        $('.myRefundMoney').html(bigRefund);
         $(".intro--login").show();
 
       },
@@ -117,20 +121,95 @@ $( document ).ready(function() {
   });
 
   $('#y1').click(function(){
-    $('#mypic1').show();
+    $('#picbtn1').show();
     $('#canvas1').show();
   });
   $('#n1').click(function(){
-    $('#mypic1').hide();
+    $('#picbtn1').hide();
     $('#canvas1').hide();
+
+    if ($('#mypic1').val().length > 0) {
+      startVal = bigRefund + "";
+      bigRefund -= f1;
+
+      gaa = new countUp.CountUp('myBigRefund', bigRefund, {startVal:startVal});
+      gaa.start();
+    }
 
     $('#mypic1').val('');
     $('#canvas1')[0].width = 0;
   });
+  $('#y2').click(function(){
+    $('#picbtn2').show();
+    $('#canvas2').show();
+  });
+  $('#n2').click(function(){
+    $('#picbtn2').hide();
+    $('#canvas2').hide();
+
+    if ($('#mypic2').val().length > 0) {
+      startVal = bigRefund + "";
+      bigRefund -= f2;
+
+      gaa = new countUp.CountUp('myBigRefund', bigRefund, {startVal:startVal});
+      gaa.start();
+    }
+
+    $('#mypic2').val('');
+    $('#canvas2')[0].width = 0;
+  });
+  $('#y3').click(function(){
+    $('#picbtn3').show();
+    $('#canvas3').show();
+  });
+  $('#n3').click(function(){
+    $('#picbtn3').hide();
+    $('#canvas3').hide();
+
+    if ($('#mypic3').val().length > 0) {
+      startVal = bigRefund + "";
+      bigRefund -= f3;
+
+      gaa = new countUp.CountUp('myBigRefund', bigRefund, {startVal:startVal});
+      gaa.start();
+    }
+
+    $('#mypic3').val('');
+    $('#canvas3')[0].width = 0;
+  });
+  $('#picbtn1').click(function() {
+    $('#mypic1').click();
+  });
+  $('#picbtn2').click(function() {
+    $('#mypic2').click();
+  });
+  $('#picbtn3').click(function() {
+    $('#mypic3').click();
+  });
 
   $('#mypic1').change(function () {
     drawOnCanvas(this.files[0], 'canvas1');
-    
+    startVal = bigRefund + "";
+    bigRefund += f1;
+
+    gaa = new countUp.CountUp('myBigRefund', bigRefund, {startVal:startVal});
+    gaa.start();
+  });
+  $('#mypic2').change(function () {
+    drawOnCanvas(this.files[0], 'canvas2');
+    startVal = bigRefund + "";
+    bigRefund += f2;
+
+    gaa = new countUp.CountUp('myBigRefund', bigRefund, {startVal:startVal});
+    gaa.start();
+  });
+  $('#mypic3').change(function () {
+    drawOnCanvas(this.files[0], 'canvas3');
+    startVal = bigRefund + "";
+    bigRefund += f3;
+
+    gaa = new countUp.CountUp('myBigRefund', bigRefund, {startVal:startVal});
+    gaa.start();
   });
 
   function drawOnCanvas(file, canvas) {
@@ -216,6 +295,11 @@ $( document ).ready(function() {
 
   // update main content area
   function updateContent(curPos, nextPos, lastItem) {
+    if (nextPos == 0) {
+      $('#myBigRefundDiv').hide();
+    } else {
+      $('#myBigRefundDiv').show();
+    }
 
     $('.main-content').children().removeClass('section--is-active');
     $('.main-content').children().eq(nextPos).addClass('section--is-active');
